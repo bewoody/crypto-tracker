@@ -6,10 +6,13 @@ import Coins from "./routes/Coins";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/crypto-tracker",
     element: <App />,
     children: [
-      { path: "", element: <Coins /> },
+      {
+        path: "",
+        element: <Coins />,
+      },
       {
         path: ":coinId",
         element: <Coin />,
