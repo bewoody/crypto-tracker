@@ -165,7 +165,7 @@ export default function Coin() {
       </Helmet>
       <Header>
         <Back>
-          <Link to={"/"}>&larr;</Link>
+          <Link to={"/crypto-tracker"}>&larr;</Link>
         </Back>
         <Title>
           {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
@@ -202,10 +202,10 @@ export default function Coin() {
           </Overview>
           <Tabs>
             <Tab isActive={chartMatch !== null}>
-              <Link to={`/${coinId}/chart`}>Chart</Link>
+              <Link to={`chart`}>Chart</Link>
             </Tab>
             <Tab isActive={priceMatch !== null}>
-              <Link to={`/${coinId}/price`}>Price</Link>
+              <Link to={`price`}>Price</Link>
             </Tab>
           </Tabs>
           <Routes>
