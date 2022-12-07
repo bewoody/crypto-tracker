@@ -145,8 +145,8 @@ export interface ITickersData {
 export default function Coin() {
   const { coinId } = useParams();
   const { state } = useLocation();
-  const priceMatch = useMatch("/:coinId/price");
-  const chartMatch = useMatch("/:coinId/chart");
+  const priceMatch = useMatch("/crypto-tracker/:coinId/price");
+  const chartMatch = useMatch("/crypto-tracker/:coinId/chart");
   const { isLoading: infoLoading, data: infoData } = useQuery<IInfoData>(
     ["coin", coinId],
     fetchCoinInfo
